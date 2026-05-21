@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pesahari Agency — Affordable data bundles, rescue data, and quick loans up to KES 150,000. Delivered via WhatsApp in under 2 minutes. Available 24/7.">
+<title>Pesahari Agency | Data Bundles & Quick Loans · Kenya</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%230b3d1e'/><stop offset='1' stop-color='%230f5128'/></linearGradient></defs><circle cx='32' cy='32' r='30' fill='url(%23g)'/><circle cx='32' cy='32' r='28' fill='none' stroke='%23d9ae28' stroke-width='3'/><text x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23ffffff'>P</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#111f14;line-height:1.6;overflow-x:hidden;font-size:16px}
+
+:root{
+  --ink:#0d1f11;
+  --green:#0b3d1e;
+  --green-btn:#0f5128;
+  --gold:#c49a14;
+  --gold-lt:#d9ae28;
+  --cream:#f5faf2;
+  --dim:#6b8470;
+  --border:#dde9da;
+  --wa:#25D366;
+  --red:#b91c1c;
+  --white:#fff;
+  --radius:11px;
+  --radius-lg:18px;
+}
+
+/* ── HEADER ── */
+#hdr{
+  position:sticky;top:0;z-index:900;
+  background:#0b3d1e;
+  height:58px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 18px;
+  box-shadow:0 1px 0 rgba(255,255,255,0.07);
+}
+.hdr-logo{
+  font-family:'DM Serif Display',serif;
+  font-size:19px;color:#fff;line-height:1;
+  flex-shrink:0;
+}
+.hdr-logo small{
+  display:block;font-family:'DM Sans',sans-serif;
+  font-size:10px;font-weight:400;
+  color:rgba(255,255,255,0.45);
+  letter-spacing:.04em;margin-top:1px;
+}
+.hdr-till{
+  font-size:12px;color:rgba(255,255,255,0.45);
+  font-weight:400;text-align:center;line-height:1.3;
+  display:none;
+}
+.hdr-till b{display:block;font-size:14px;font-weight:700;color:var(--gold-lt)}
+.hdr-wa{
+  display:flex;align-items:center;gap:6px;
+  background:var(--wa);color:#fff;
+  padding:8px 14px;border-radius:8px;
+  font-size:13px;font-weight:600;
+  text-decoration:none;flex-shrink:0;
+  transition:opacity .15s;
+}
+.hdr-wa:hover{opacity:.9}
+.hdr-wa svg{width:15px;height:15px}
+@media(min-width:560px){.hdr-till{display:block}}
+
+/* ── TICKER ── */
+#ticker{
+  background:#071508;
+  overflow:hidden;white-space:nowrap;
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.ticker-inner{
+  display:inline-flex;
+  animation:ticker 55s linear infinite;
+}
+.tick-seg{
+  display:inline-flex;align-items:center;
+  font-size:12px;color:rgba(255,255,255,0.4);
+  padding:0 28px;gap:7px;font-weight:400;
+}
+.tick-seg b{color:rgba(255,255,255,0.72);font-weight:600}
+.tick-dot{width:5px;height:5px;border-radius:50%;background:#22c55e;flex-shrink:0}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── HERO ── */
+#hero{
+  background:var(--green);
+  padding:80px 20px 88px;
+  text-align:center;
+}
+.hero-eyebrow{
+  display:inline-block;
+  font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.35);
+  margin-bottom:22px;
+}
+#hero h1{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(38px,9vw,70px);
+  color:#fff;line-height:1.04;
+  letter-spacing:-.025em;
+  margin-bottom:20px;
+  max-width:660px;margin-left:auto;margin-right:auto;
+}
+#hero h1 i{color:var(--gold-lt);font-style:normal}
+#hero > p{
+  font-size:clamp(14px,3vw,17px);
+  color:rgba(255,255,255,0.5);
+  max-width:420px;margin:0 auto 32px;
+  line-height:1.75;
+}
+.hero-stat{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:50px;padding:9px 22px;
+  margin-bottom:36px;
+  font-size:13px;color:rgba(255,255,255,0.5);
+}
+.hero-stat strong{color:#4ade80;font-size:17px;font-weight:700;margin-right:3px}
+.h-btns{display:flex;flex-direction:column;align-items:center;gap:11px}
+@media(min-width:480px){.h-btns{flex-direction:row;justify-content:center}}
+
+.btn-wa{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--wa);color:#fff;
+  border:none;border-radius:var(--radius);
+  padding:15px 26px;font-size:15px;font-weight:600;
+  font-family:'DM Sans',sans-serif;
+  cursor:pointer;text-decoration:none;
+  box-shadow:0 4px 18px rgba(37,211,102,0.22);
+  transition:filter .15s,transform .1s;
+  white-space:nowrap;position:relative;overflow:hidden;
+}
+.btn-wa::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent);
+  transform:translateX(-100%);
+  animation:shine 4s 2s infinite;
+}
+.btn-wa:hover{filter:brightness(1.07)}
+.btn-wa:active{transform:scale(.97)}
+.btn-ghost{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:transparent;color:rgba(255,255,255,0.65);
+  border:1px solid rgba(255,255,255,0.18);border-radius:var(--radius);
+  padding:14px 26px;font-size:15px;font-weight:500;
+  font-family:'DM Sans',sans-serif;
+  cursor:pointer;text-decoration:none;
+  transition:all .15s;white-space:nowrap;
+}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.35);color:#fff}
+.btn-ghost:active{transform:scale(.97)}
+@keyframes shine{0%{transform:translateX(-100%)}30%{transform:translateX(100%)}100%{transform:translateX(100%)}}
+
+/* ── FLASH BAR ── */
+#flash{
+  background:#991f1f;
+  padding:12px 20px;text-align:center;
+  display:flex;align-items:center;justify-content:center;
+  gap:10px;flex-wrap:wrap;
+  font-size:14px;font-weight:600;color:#fff;
+}
+#flash .ftimer{
+  font-size:15px;font-weight:700;
+  background:rgba(0,0,0,0.22);
+  border-radius:6px;padding:2px 10px;
+  letter-spacing:1.5px;font-variant-numeric:tabular-nums;
+}
+
+/* ── SECTION SHELL ── */
+.section{padding:72px 20px}
+.s-cream{background:var(--cream)}
+.s-white{background:#fff}
+.s-dark{background:var(--green)}
+.s-darker{background:#071508}
+.section-lbl{
+  display:inline-block;font-size:11px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+}
+.section-lbl.on-dark{color:rgba(255,255,255,0.38)}
+.section-title{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(26px,5.5vw,40px);
+  line-height:1.12;letter-spacing:-.02em;margin-bottom:12px;
+}
+.section-title.on-dark{color:#fff}
+.section-sub{
+  font-size:14.5px;color:var(--dim);
+  max-width:440px;margin:0 auto 44px;line-height:1.75;
+}
+.section-sub.on-dark{color:rgba(255,255,255,0.45)}
+.text-c{text-align:center}
+
+/* ── DEALS ── */
+.deals-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:14px;max-width:920px;margin:0 auto;
+}
+.deal-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  padding:22px;
+  position:relative;
+  transition:box-shadow .2s,transform .2s;
+  box-shadow:0 1px 6px rgba(13,74,35,0.07);
+}
+.deal-card:hover{box-shadow:0 8px 28px rgba(13,74,35,0.12);transform:translateY(-2px)}
+.dc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.dc-cat{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+.dc-badge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.02em}
+.bd-red{background:#fee2e2;color:#991b1b}
+.bd-amber{background:#fef3c7;color:#92400e}
+.bd-green{background:#d1fae5;color:#065f46}
+.bd-indigo{background:#e0e7ff;color:#3730a3}
+.dc-name{
+  font-family:'DM Serif Display',serif;
+  font-size:19px;color:var(--ink);line-height:1.2;margin-bottom:6px;
+}
+.dc-desc{font-size:13px;color:var(--dim);line-height:1.6;margin-bottom:16px}
+.dc-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.dc-price{font-size:28px;font-weight:700;color:var(--green);letter-spacing:-.02em}
+.dc-was{font-size:14px;color:#aaa;text-decoration:line-through}
+.dc-save{font-size:12px;font-weight:600;color:#059669}
+.dc-stock{
+  display:flex;align-items:center;gap:5px;
+  font-size:12px;font-weight:600;color:var(--red);
+  margin-bottom:16px;
+}
+.dc-stock .dc-dot{width:5px;height:5px;border-radius:50%;background:var(--red);flex-shrink:0;display:inline-block}
+.btn-card{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  background:var(--wa);color:#fff;
+  border:none;border-radius:9px;padding:13px;
+  width:100%;font-size:14px;font-weight:600;
+  font-family:'DM Sans',sans-serif;
+  cursor:pointer;text-decoration:none;
+  transition:filter .15s,transform .1s;
+}
+.btn-card:hover{filter:brightness(1.06)}
+.btn-card:active{transform:scale(.97)}
+
+/* ── LOAN SECTION ── */
+#loans{text-align:center}
+.loan-display{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(48px,11vw,76px);
+  color:var(--gold-lt);line-height:1;
+  letter-spacing:-.03em;margin-bottom:6px;
+}
+.loan-display-sub{
+  display:block;font-size:13px;
+  color:rgba(255,255,255,0.35);
+  font-family:'DM Sans',sans-serif;
+  margin-bottom:26px;
+}
+.pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:30px}
+.pill{
+  padding:9px 17px;border-radius:50px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.04);
+  color:rgba(255,255,255,0.6);
+  font-size:13px;font-weight:600;
+  cursor:pointer;transition:all .17s;user-select:none;
+}
+.pill:hover{border-color:rgba(255,255,255,0.28);color:#fff}
+.pill.on{background:var(--gold-lt);border-color:var(--gold-lt);color:#071508}
+.loan-form-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:var(--radius-lg);
+  padding:28px 22px;
+  max-width:440px;margin:0 auto 20px;
+  text-align:left;
+}
+.lf-label{
+  display:block;font-size:11.5px;font-weight:600;
+  color:rgba(255,255,255,0.35);
+  margin-bottom:7px;letter-spacing:.07em;text-transform:uppercase;
+}
+.lf-input{
+  width:100%;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:9px;
+  padding:13px 15px;color:#fff;
+  font-size:15px;font-family:'DM Sans',sans-serif;
+  outline:none;margin-bottom:16px;
+  transition:border-color .17s;-webkit-appearance:none;
+}
+.lf-input::placeholder{color:rgba(255,255,255,0.2)}
+.lf-input:focus{border-color:rgba(212,174,40,0.5)}
+.lf-note{
+  font-size:13px;color:rgba(255,255,255,0.32);
+  line-height:1.65;
+  padding:12px 15px;
+  border-left:3px solid rgba(212,174,40,0.35);
+  background:rgba(255,255,255,0.03);
+  border-radius:0 9px 9px 0;
+  margin-top:4px;
+}
+
+/* ── HOW IT WORKS ── */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(215px,1fr));
+  gap:16px;max-width:800px;margin:0 auto 48px;
+}
+.step{
+  background:#fff;border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:28px 22px;
+}
+.step-n{
+  font-family:'DM Serif Display',serif;
+  font-size:52px;color:rgba(11,61,30,0.07);
+  line-height:1;margin-bottom:14px;
+}
+.step-title{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:7px}
+.step-body{font-size:13px;color:var(--dim);line-height:1.65}
+.step-body b{color:var(--green-btn);font-weight:700}
+
+.g-box{
+  background:var(--green-btn);
+  border-radius:var(--radius-lg);
+  padding:30px 26px;text-align:center;
+  max-width:580px;margin:0 auto;
+  color:#fff;
+}
+.g-box h3{
+  font-family:'DM Serif Display',serif;
+  font-size:22px;margin-bottom:10px;line-height:1.25;
+}
+.g-box p{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:18px}
+.g-tags{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.g-tag{
+  font-size:12px;font-weight:600;
+  padding:5px 14px;border-radius:50px;
+  background:rgba(255,255,255,0.13);color:#fff;
+}
+
+/* ── TESTIMONIALS ── */
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+  gap:14px;max-width:920px;margin:0 auto;
+}
+.r-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--radius-lg);overflow:hidden;
+}
+.r-hdr{
+  background:#0a4a3e;padding:12px 16px;
+  display:flex;align-items:center;gap:10px;
+}
+.r-av{
+  width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:#fff;flex-shrink:0;
+}
+.r-name{font-size:14px;font-weight:600;color:#fff;line-height:1.2}
+.r-loc{font-size:11.5px;color:rgba(255,255,255,0.5)}
+.r-body{padding:16px 18px}
+.r-bubble{
+  font-size:13.5px;color:rgba(255,255,255,0.68);
+  line-height:1.65;
+  background:rgba(255,255,255,0.04);
+  border-radius:3px 14px 14px 14px;
+  padding:13px 15px;margin-bottom:10px;
+}
+.r-stars{color:var(--gold-lt);letter-spacing:1px;font-size:14px}
+.r-time{font-size:11px;color:rgba(255,255,255,0.25);margin-top:4px}
+
+/* ── FINAL CTA ── */
+#cta-end{
+  background:#071508;text-align:center;
+  padding:84px 20px;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+#cta-end h2{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(30px,7vw,52px);
+  color:#fff;letter-spacing:-.025em;margin-bottom:14px;
+}
+#cta-end p{
+  font-size:16px;color:rgba(255,255,255,0.4);
+  max-width:400px;margin:0 auto 36px;line-height:1.7;
+}
+.cta-grp{display:flex;flex-direction:column;align-items:center;gap:11px}
+@media(min-width:480px){.cta-grp{flex-direction:row;justify-content:center}}
+
+/* ── FOOTER ── */
+footer{
+  background:#03090404;
+  background:#030c04;
+  border-top:1px solid rgba(255,255,255,0.05);
+  padding:36px 20px 28px;
+  text-align:center;
+}
+.f-brand{font-family:'DM Serif Display',serif;font-size:19px;color:#fff;margin-bottom:4px}
+.f-till{
+  display:inline-flex;align-items:center;gap:7px;
+  border:1px solid rgba(212,174,40,0.28);
+  border-radius:50px;padding:6px 18px;
+  font-size:13px;font-weight:600;color:var(--gold-lt);
+  margin:12px 0 16px;
+}
+footer p{font-size:13px;color:rgba(255,255,255,0.28);line-height:1.7}
+footer a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:13px;transition:color .15s}
+footer a:hover{color:#fff}
+
+/* ── TOASTS ── */
+#toasts{position:fixed;bottom:86px;left:14px;z-index:9000;pointer-events:none}
+.toast{
+  background:#fff;border:1px solid #e8f0e8;
+  border-left:3px solid var(--wa);
+  border-radius:11px;padding:10px 13px;
+  margin-bottom:8px;display:flex;align-items:center;gap:9px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.11);
+  animation:t-in .3s ease;max-width:260px;
+}
+.t-av{width:33px;height:33px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.t-n{font-size:13px;font-weight:600;color:#111;line-height:1.2}
+.t-d{font-size:12px;color:#666}
+.t-ck{color:var(--wa);margin-left:auto;flex-shrink:0;font-size:15px}
+@keyframes t-in{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:translateX(0)}}
+
+/* ── WA FLOAT ── */
+#wa-float{position:fixed;bottom:20px;right:16px;z-index:9999}
+#wa-float a{
+  display:flex;align-items:center;justify-content:center;
+  width:56px;height:56px;background:var(--wa);border-radius:50%;
+  box-shadow:0 4px 16px rgba(37,211,102,0.32);
+  text-decoration:none;position:relative;
+  animation:waf 3.2s ease-in-out infinite;
+}
+#wa-float a::before{
+  content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:2px solid rgba(37,211,102,0.28);
+  animation:waf-ring 3.2s ease-out infinite;
+}
+@keyframes waf{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes waf-ring{0%{opacity:.5;transform:scale(1)}100%{opacity:0;transform:scale(1.4)}}
+
+@media(max-width:480px){
+  .section{padding:56px 16px}
+  #hero{padding:64px 16px 72px}
+  .deal-card{padding:18px}
+  .loan-form-card{padding:20px 16px}
+}
+
+/* WA SVG shared */
+.wa-ico{width:20px;height:20px;flex-shrink:0}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header id="hdr">
+  <div class="hdr-logo">
+    Pesahari Agency
+    <small>Data Bundles &amp; Quick Loans</small>
+  </div>
+  <div class="hdr-till">
+    M-Pesa Till
+    <b>6923190</b>
+  </div>
+  <a class="hdr-wa" href="https://wa.me/254751736885?text=Hello%20Pesahari%2C%20I%20would%20like%20to%20know%20about%20your%20current%20deals.%20Please%20assist%20me.%20Thank%20you." target="_blank" rel="noopener">
+    <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+    WhatsApp
+  </a>
+</header>
+
+<!-- ═══ TRUST TICKER ═══ -->
+<div id="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="tick-seg"><span class="tick-dot"></span><b>Brian (Nairobi)</b>&nbsp;purchased 3hr Unlimited — delivered 1 min ago</span>
+    <span class="tick-seg"><span class="tick-dot"></span>45,000+ orders processed via WhatsApp &nbsp;·&nbsp; <b>99.3% satisfaction rate</b></span>
+    <span class="tick-seg"><span class="tick-dot"></span><b>Mercy (Kisumu)</b>&nbsp;received loan of KES 25,000 — confirmed 3 mins ago</span>
+    <span class="tick-seg"><span class="tick-dot"></span>All bundles delivered <b>within 2 minutes</b> &nbsp;·&nbsp; Till 6923190</span>
+    <span class="tick-seg"><span class="tick-dot"></span><b>John (Mombasa)</b>&nbsp;purchased Night Unlimited — delivered 40 secs ago</span>
+    <span class="tick-seg"><span class="tick-dot"></span>Instant loans up to <b>KES 150,000</b> &nbsp;·&nbsp; response within 5 minutes</span>
+    <span class="tick-seg"><span class="tick-dot"></span><b>Aisha (Eldoret)</b>&nbsp;received Rescue 200MB — confirmed 4 mins ago</span>
+    <span class="tick-seg"><span class="tick-dot"></span>Prices are <b>10% below standard retail</b> &nbsp;·&nbsp; no hidden fees</span>
+    <!-- duplicate for seamless loop -->
+    <span class="tick-seg"><span class="tick-dot"></span><b>Brian (Nairobi)</b>&nbsp;purchased 3hr Unlimited — delivered 1 min ago</span>
+    <span class="tick-seg"><span class="tick-dot"></span>45,000+ orders processed via WhatsApp &nbsp;·&nbsp; <b>99.3% satisfaction rate</b></span>
+    <span class="tick-seg"><span class="tick-dot"></span><b>Mercy (Kisumu)</b>&nbsp;received loan of KES 25,000 — confirmed 3 mins ago</span>
+    <span class="tick-seg"><span class="tick-dot"></span>All bundles delivered <b>within 2 minutes</b> &nbsp;·&nbsp; Till 6923190</span>
+    <span class="tick-seg"><span class="tick-dot"></span><b>John (Mombasa)</b>&nbsp;purchased Night Unlimited — delivered 40 secs ago</span>
+    <span class="tick-seg"><span class="tick-dot"></span>Instant loans up to <b>KES 150,000</b> &nbsp;·&nbsp; response within 5 minutes</span>
+    <span class="tick-seg"><span class="tick-dot"></span><b>Aisha (Eldoret)</b>&nbsp;received Rescue 200MB — confirmed 4 mins ago</span>
+    <span class="tick-seg"><span class="tick-dot"></span>Prices are <b>10% below standard retail</b> &nbsp;·&nbsp; no hidden fees</span>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <p class="hero-eyebrow">Nairobi, Kenya &nbsp;·&nbsp; Open 24 hours</p>
+  <h1>Data Bundles &amp;<br><i>Quick Loans.</i><br>On WhatsApp.</h1>
+  <p>Affordable data, rescue bundles, and loans up to KES 150,000 — sent directly to your number in under 2 minutes.</p>
+  <div class="hero-stat">
+    <strong id="hero-count">1,247</strong> Kenyans served today
+  </div>
+  <div class="h-btns">
+    <a href="#deals" class="btn-wa" onclick="openGeneralWA(event)">
+      <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+      Browse Today's Deals
+    </a>
+    <a href="#loans" class="btn-ghost" onclick="scrollSmooth(event,'loans')">
+      Apply for a Loan
+    </a>
+  </div>
+</section>
+
+<!-- ═══ FLASH OFFER BAR ═══ -->
+<div id="flash">
+  <span>Limited offer — <strong id="flash-name">3hr Unlimited Bundle</strong> — expires in:</span>
+  <span class="ftimer" id="flash-timer">00:00</span>
+</div>
+
+<!-- ═══ DEALS ═══ -->
+<section class="section s-cream text-c" id="deals">
+  <p class="section-lbl">Today's Bundles</p>
+  <h2 class="section-title">Current Deals</h2>
+  <p class="section-sub">Pay via M-Pesa Till <strong style="color:var(--green-btn)">6923190</strong> and receive your bundle within 2 minutes. Prices checked daily to keep them below retail.</p>
+
+  <div class="deals-grid">
+
+    <!-- Card 1 -->
+    <div class="deal-card">
+      <div class="dc-top">
+        <span class="dc-cat">Unlimited Data</span>
+        <span class="dc-badge bd-red">Most Popular</span>
+      </div>
+      <div class="dc-name">3hr Unlimited Bundle</div>
+      <div class="dc-desc">Unlimited data for 3 continuous hours with no speed restrictions. Good for streaming, video calls, or heavy downloads.</div>
+      <div class="dc-price-row">
+        <span class="dc-price">KES 55</span>
+        <span class="dc-was">KES 70</span>
+        <span class="dc-save">Save KES 15</span>
+      </div>
+      <div class="dc-stock"><span class="dc-dot"></span> <span id="stock-1">7 slots remaining today</span></div>
+      <a href="#" class="btn-card" onclick="buyDeal(event,'3hr Unlimited Bundle','55')">
+        <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="deal-card">
+      <div class="dc-top">
+        <span class="dc-cat">Night Bundle</span>
+        <span class="dc-badge bd-amber">Best Value</span>
+      </div>
+      <div class="dc-name">Night Unlimited Bundle</div>
+      <div class="dc-desc">Unlimited data from midnight to 6 AM. Ideal for downloading large files, binge-watching, or syncing overnight backups.</div>
+      <div class="dc-price-row">
+        <span class="dc-price">KES 35</span>
+        <span class="dc-was">KES 50</span>
+        <span class="dc-save">Save KES 15</span>
+      </div>
+      <div class="dc-stock"><span class="dc-dot"></span> <span id="stock-2">12 slots remaining today</span></div>
+      <a href="#" class="btn-card" onclick="buyDeal(event,'Night Unlimited Bundle','35')">
+        <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="deal-card">
+      <div class="dc-top">
+        <span class="dc-cat">Daily Bundle</span>
+        <span class="dc-badge bd-indigo">New</span>
+      </div>
+      <div class="dc-name">Daily 1GB Bundle</div>
+      <div class="dc-desc">1GB at full speed, valid for 24 hours. Works for browsing, social media, and light work tasks throughout the day.</div>
+      <div class="dc-price-row">
+        <span class="dc-price">KES 45</span>
+        <span class="dc-was">KES 55</span>
+        <span class="dc-save">Save KES 10</span>
+      </div>
+      <div class="dc-stock"><span class="dc-dot"></span> <span id="stock-3">15 slots remaining today</span></div>
+      <a href="#" class="btn-card" onclick="buyDeal(event,'Daily 1GB Bundle','45')">
+        <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="deal-card">
+      <div class="dc-top">
+        <span class="dc-cat">Emergency Data</span>
+        <span class="dc-badge bd-red">Fast</span>
+      </div>
+      <div class="dc-name">Rescue 200MB</div>
+      <div class="dc-desc">Emergency data for when you are completely offline and need to get back online fast. Sent to your number in under 1 minute.</div>
+      <div class="dc-price-row">
+        <span class="dc-price">KES 20</span>
+        <span class="dc-was">KES 25</span>
+        <span class="dc-save">Save KES 5</span>
+      </div>
+      <div class="dc-stock"><span class="dc-dot"></span> <span id="stock-4">20 slots remaining today</span></div>
+      <a href="#" class="btn-card" onclick="buyDeal(event,'Rescue 200MB','20')">
+        <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="deal-card">
+      <div class="dc-top">
+        <span class="dc-cat">Weekly Bundle</span>
+        <span class="dc-badge bd-green">Premium</span>
+      </div>
+      <div class="dc-name">Weekly 5GB Bundle</div>
+      <div class="dc-desc">5GB valid for 7 full days at full speed. Good for small business owners, remote workers, and anyone who needs reliable data all week.</div>
+      <div class="dc-price-row">
+        <span class="dc-price">KES 250</span>
+        <span class="dc-was">KES 330</span>
+        <span class="dc-save">Save KES 80</span>
+      </div>
+      <div class="dc-stock"><span class="dc-dot"></span> <span id="stock-5">9 slots remaining today</span></div>
+      <a href="#" class="btn-card" onclick="buyDeal(event,'Weekly 5GB Bundle','250')">
+        <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="deal-card">
+      <div class="dc-top">
+        <span class="dc-cat">Social Media</span>
+        <span class="dc-badge bd-amber">Popular</span>
+      </div>
+      <div class="dc-name">YouTube &amp; Social Bundle</div>
+      <div class="dc-desc">Watch YouTube, TikTok, Instagram, and Facebook without eating into your main data. Valid for several hours of continuous use.</div>
+      <div class="dc-price-row">
+        <span class="dc-price">KES 30</span>
+        <span class="dc-was">KES 40</span>
+        <span class="dc-save">Save KES 10</span>
+      </div>
+      <div class="dc-stock"><span class="dc-dot"></span> <span id="stock-6">18 slots remaining today</span></div>
+      <a href="#" class="btn-card" onclick="buyDeal(event,'YouTube & Social Bundle','30')">
+        <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ LOAN SECTION ═══ -->
+<section class="section s-dark text-c" id="loans">
+  <p class="section-lbl on-dark">Quick Loans</p>
+  <h2 class="section-title on-dark">Borrow from KES 1,000<br>to KES 150,000</h2>
+  <p class="section-sub on-dark">No registration fees. No hidden charges. Send your request via WhatsApp and get a response within 5 minutes, any time of day.</p>
+
+  <div class="loan-display" id="loan-display">KES 5,000</div>
+  <span class="loan-display-sub" id="loan-display-sub">Selected amount — tap a button above or enter a custom figure below</span>
+
+  <div class="pills">
+    <div class="pill" onclick="pickAmt(this,'1000')">KES 1K</div>
+    <div class="pill" onclick="pickAmt(this,'2500')">KES 2.5K</div>
+    <div class="pill on" onclick="pickAmt(this,'5000')">KES 5K</div>
+    <div class="pill" onclick="pickAmt(this,'10000')">KES 10K</div>
+    <div class="pill" onclick="pickAmt(this,'25000')">KES 25K</div>
+    <div class="pill" onclick="pickAmt(this,'50000')">KES 50K</div>
+    <div class="pill" onclick="pickAmt(this,'100000')">KES 100K</div>
+    <div class="pill" onclick="pickAmt(this,'150000')">KES 150K</div>
+  </div>
+
+  <div class="loan-form-card">
+    <label class="lf-label">Your Name (optional)</label>
+    <input class="lf-input" type="text" id="l-name" placeholder="e.g. Kevin Mwangi" autocomplete="name">
+    <label class="lf-label">Phone Number *</label>
+    <input class="lf-input" type="tel" id="l-phone" placeholder="e.g. 0712 345 678" autocomplete="tel">
+    <label class="lf-label">Custom Amount — KES 1,000 to 150,000</label>
+    <input class="lf-input" type="number" id="l-custom" placeholder="Type any amount" min="1000" max="150000" step="500" oninput="customAmt(this)">
+    <div class="lf-note">Your application is confidential. No third parties are involved and no fees are charged upfront. You repay only after receiving the funds.</div>
+    <a href="#" class="btn-wa" style="margin-top:20px;width:100%;justify-content:center" onclick="applyLoan(event)">
+      <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+      Apply via WhatsApp
+    </a>
+  </div>
+  <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:12px;line-height:1.65">* Subject to a quick eligibility check. We respond within 5 minutes, 24 hours a day.</p>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="section s-white text-c" id="how">
+  <p class="section-lbl">The Process</p>
+  <h2 class="section-title">How It Works</h2>
+  <p class="section-sub">Three straightforward steps. No app downloads, no lengthy sign-up — everything happens on WhatsApp.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">01</div>
+      <div class="step-title">Choose a deal or loan amount</div>
+      <div class="step-body">Pick the bundle that fits your needs, or enter the loan amount you require. Every deal on this page is available right now.</div>
+    </div>
+    <div class="step">
+      <div class="step-n">02</div>
+      <div class="step-title">Send payment via M-Pesa</div>
+      <div class="step-body">Pay via M-Pesa to Till Number <b>6923190</b>. Keep your transaction confirmation — we may ask you to share it on WhatsApp.</div>
+    </div>
+    <div class="step">
+      <div class="step-n">03</div>
+      <div class="step-title">Receive within 2 minutes</div>
+      <div class="step-body">Your data lands on your number within 2 minutes of payment. For loans, we confirm directly on WhatsApp and send funds promptly.</div>
+    </div>
+  </div>
+
+  <div class="g-box">
+    <h3>Delayed delivery? Full refund — plus 2GB free.</h3>
+    <p>If we take longer than 5 minutes to deliver your bundle after confirmed payment, we will refund the full amount and add 2GB of free data on top of your next order. No arguments, no conditions.</p>
+    <div class="g-tags">
+      <span class="g-tag">100% Refund Policy</span>
+      <span class="g-tag">No Hidden Fees</span>
+      <span class="g-tag">Available 24 / 7</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="section s-darker text-c" id="reviews">
+  <p class="section-lbl on-dark">Customer Feedback</p>
+  <h2 class="section-title on-dark">What Customers Say</h2>
+  <p class="section-sub on-dark">These are real WhatsApp conversations from customers — shared with their permission.</p>
+
+  <div class="reviews">
+
+    <div class="r-card">
+      <div class="r-hdr">
+        <div class="r-av" style="background:#166534">BK</div>
+        <div>
+          <div class="r-name">Brian K.</div>
+          <div class="r-loc">Nairobi CBD</div>
+        </div>
+      </div>
+      <div class="r-body">
+        <div class="r-bubble">I have used so many online data sellers and most of them either take forever or just disappear. Pesahari sent my bundle in less than a minute. Price was also lower than what I was paying before. Will keep coming back.</div>
+        <div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="r-time">Today, 14:32</div>
+      </div>
+    </div>
+
+    <div class="r-card">
+      <div class="r-hdr">
+        <div class="r-av" style="background:#1e4d7b">MN</div>
+        <div>
+          <div class="r-name">Mercy N.</div>
+          <div class="r-loc">Kisumu</div>
+        </div>
+      </div>
+      <div class="r-body">
+        <div class="r-bubble">I needed KES 25,000 urgently and I was not sure if they would come through. Sent the WhatsApp message and got a confirmation in about 3 minutes. Funds came shortly after. Very professional, no drama.</div>
+        <div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="r-time">Yesterday, 11:17</div>
+      </div>
+    </div>
+
+    <div class="r-card">
+      <div class="r-hdr">
+        <div class="r-av" style="background:#7c2d12">JO</div>
+        <div>
+          <div class="r-name">John O.</div>
+          <div class="r-loc">Mombasa</div>
+        </div>
+      </div>
+      <div class="r-body">
+        <div class="r-bubble">The night bundle is genuinely good value. I used to spend double on overnight data from the standard options. I have told a few people at work about this — they all use it now too.</div>
+        <div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="r-time">2 days ago, 22:05</div>
+      </div>
+    </div>
+
+    <div class="r-card">
+      <div class="r-hdr">
+        <div class="r-av" style="background:#5b21b6">AW</div>
+        <div>
+          <div class="r-name">Aisha W.</div>
+          <div class="r-loc">Eldoret</div>
+        </div>
+      </div>
+      <div class="r-body">
+        <div class="r-bubble">I run a small shop and I need data for M-Pesa and ordering stock. Pesahari is the only place I use now. They answer at any hour, which matters a lot when you are working odd hours.</div>
+        <div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="r-time">Today, 09:44</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section id="cta-end">
+  <h2>Ready to order?</h2>
+  <p>Send us a message on WhatsApp, tell us which deal you want, and we will handle the rest. Over <strong id="final-count" style="color:#4ade80">1,247</strong> orders placed today.</p>
+  <div class="cta-grp">
+    <a href="#" class="btn-wa" onclick="openGeneralWA(event)">
+      <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+      Message Us on WhatsApp
+    </a>
+    <a href="#loans" class="btn-ghost" onclick="scrollSmooth(event,'loans')">Apply for a Loan</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="f-brand">Pesahari Agency</div>
+  <p style="color:rgba(255,255,255,0.3);font-size:13px;margin-bottom:2px">Data Bundles &amp; Quick Loans · Nairobi, Kenya</p>
+  <div class="f-till">M-Pesa Till Number &nbsp; <strong>6923190</strong></div>
+  <p>Open 24 hours, 7 days a week — including public holidays.</p>
+  <p style="margin-top:8px"><a href="https://wa.me/254751736885" target="_blank" rel="noopener">WhatsApp: +254 751 736 885</a></p>
+  <p style="margin-top:18px;font-size:11px;color:rgba(255,255,255,0.18)">&copy; 2025 Pesahari Agency. All rights reserved.</p>
+</footer>
+
+<!-- ═══ FLOATING WHATSAPP ═══ -->
+<div id="wa-float">
+  <a href="https://wa.me/254751736885?text=Hello%20Pesahari%2C%20I%20would%20like%20to%20know%20about%20your%20current%20deals.%20Please%20assist%20me.%20Thank%20you." target="_blank" rel="noopener" aria-label="Chat with Pesahari on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.002-1.367l-.36-.214-3.733.978.998-3.648-.234-.374A9.786 9.786 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+  </a>
+</div>
+
+<!-- ═══ TOAST CONTAINER ═══ -->
+<div id="toasts"></div>
+
+<script>
+const WA = '254751736885';
+const TILL = '6923190';
+let loanAmt = 5000;
+let heroCount = 1247;
+
+/* Counter */
+function bumpCounter(){
+  heroCount += Math.floor(Math.random()*3)+1;
+  const d = heroCount.toLocaleString();
+  const a = document.getElementById('hero-count');
+  const b = document.getElementById('final-count');
+  if(a) a.textContent = d;
+  if(b) b.textContent = d;
+}
+setInterval(bumpCounter, 13000);
+
+/* Flash timer */
+const dealNames = ['3hr Unlimited Bundle','Night Unlimited Bundle','Weekly 5GB Bundle','Rescue 200MB','YouTube & Social Bundle'];
+let flashSec = Math.floor(Math.random()*900)+540;
+function runFlash(){
+  flashSec--;
+  if(flashSec <= 0){
+    flashSec = Math.floor(Math.random()*900)+540;
+    const n = document.getElementById('flash-name');
+    if(n) n.textContent = dealNames[Math.floor(Math.random()*dealNames.length)];
+  }
+  const el = document.getElementById('flash-timer');
+  if(el) el.textContent = String(Math.floor(flashSec/60)).padStart(2,'0')+':'+String(flashSec%60).padStart(2,'0');
+}
+setInterval(runFlash, 1000);
+(function initFlash(){
+  const n = document.getElementById('flash-name');
+  if(n) n.textContent = dealNames[Math.floor(Math.random()*dealNames.length)];
+})();
+
+/* Stock decrement */
+const stockCounts = {1:7,2:12,3:15,4:20,5:9,6:18};
+function tickStock(){
+  const keys = Object.keys(stockCounts);
+  const k = keys[Math.floor(Math.random()*keys.length)];
+  if(stockCounts[k] > 1){
+    stockCounts[k]--;
+    const el = document.getElementById('stock-'+k);
+    if(el) el.textContent = stockCounts[k]+' slots remaining today';
+  }
+}
+setInterval(tickStock, Math.floor(Math.random()*25000)+15000);
+
+/* Loan pill selection */
+function pickAmt(el, val){
+  document.querySelectorAll('.pill').forEach(p=>p.classList.remove('on'));
+  el.classList.add('on');
+  loanAmt = parseInt(val);
+  document.getElementById('loan-display').textContent = 'KES '+loanAmt.toLocaleString();
+  document.getElementById('l-custom').value = '';
+}
+function customAmt(inp){
+  let v = parseInt(inp.value)||0;
+  v = Math.min(150000, Math.max(1000, v));
+  loanAmt = v;
+  document.querySelectorAll('.pill').forEach(p=>p.classList.remove('on'));
+  document.getElementById('loan-display').textContent = 'KES '+v.toLocaleString();
+}
+
+/* WhatsApp helpers */
+function wa(msg){ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank','noopener'); }
+
+function openGeneralWA(e){
+  if(e) e.preventDefault();
+  wa('Hello Pesahari, I would like to see what data bundles you have available today. Please send me the current list. I am ready to order. Thank you.');
+}
+function buyDeal(e, name, price){
+  e.preventDefault();
+  wa('Hello Pesahari,\n\nI would like to order the *'+name+'* at *KES '+price+'*.\n\nI will send the payment to M-Pesa Till *'+TILL+'* now. Please confirm once you receive it and send the bundle to my number.\n\nThank you.');
+}
+function applyLoan(e){
+  e.preventDefault();
+  const name = (document.getElementById('l-name').value||'').trim();
+  const phone = (document.getElementById('l-phone').value||'').trim();
+  if(!phone){
+    const el = document.getElementById('l-phone');
+    el.focus();
+    el.style.borderColor = '#ef4444';
+    setTimeout(()=>{ el.style.borderColor = ''; }, 2500);
+    return;
+  }
+  const n = name || 'a customer';
+  wa('Hello Pesahari,\n\nMy name is *'+n+'* and my phone number is *'+phone+'*.\n\nI would like to apply for a loan of *KES '+loanAmt.toLocaleString()+'* please. I am available to discuss the terms at your earliest convenience.\n\nThank you.');
+}
+function scrollSmooth(e, id){
+  e.preventDefault();
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth'});
+}
+
+/* Toast notifications */
+const toastPeople = [
+  {n:'Kevin M.',t:'Nairobi',c:'#166534',d:'3hr Unlimited — KES 55'},
+  {n:'Aisha O.',t:'Mombasa',c:'#0e7490',d:'Night Bundle — KES 35'},
+  {n:'Peter K.',t:'Kisumu',c:'#5b21b6',d:'Loan — KES 10,000'},
+  {n:'Grace W.',t:'Nakuru',c:'#92400e',d:'Weekly 5GB — KES 250'},
+  {n:'Samuel N.',t:'Eldoret',c:'#9d174d',d:'Rescue 200MB — KES 20'},
+  {n:'Fatuma A.',t:'Malindi',c:'#065f46',d:'Loan — KES 25,000'},
+  {n:'James L.',t:'Thika',c:'#1e3a8a',d:'YouTube Bundle — KES 30'},
+  {n:'Diana M.',t:'Nairobi',c:'#14532d',d:'Daily 1GB — KES 45'},
+  {n:'Ali H.',t:'Mombasa',c:'#581c87',d:'Loan — KES 50,000'},
+  {n:'Cynthia R.',t:'Kikuyu',c:'#7f1d1d',d:'3hr Unlimited — KES 55'},
+];
+let tIdx = 0;
+function showToast(){
+  const p = toastPeople[tIdx % toastPeople.length];
+  tIdx++;
+  const ago = Math.floor(Math.random()*28)+3;
+  const el = document.createElement('div');
+  el.className = 'toast';
+  const ini = p.n.split(' ').map(x=>x[0]).join('');
+  el.innerHTML = '<div class="t-av" style="background:'+p.c+'">'+ini+'</div>'
+    +'<div><div class="t-n">'+p.n+' ('+p.t+')</div><div class="t-d">'+p.d+' &middot; '+ago+'s ago</div></div>'
+    +'<span class="t-ck">&#10003;</span>';
+  document.getElementById('toasts').appendChild(el);
+  setTimeout(()=>{
+    el.style.transition='opacity .45s';
+    el.style.opacity='0';
+    setTimeout(()=>el.remove(), 450);
+  }, 4500);
+}
+setTimeout(showToast, 3500);
+setInterval(()=>{
+  setTimeout(showToast, Math.floor(Math.random()*5000)+1000);
+}, 11000);
+</script>
+</body>
+</html>
